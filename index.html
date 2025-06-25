@@ -1,81 +1,369 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #0000e3; -webkit-text-stroke: #0000e3}
-    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
-    span.s1 {font-kerning: none}
-    span.s2 {text-decoration: underline ; font-kerning: none}
-    span.s3 {font-kerning: none; -webkit-text-stroke: 0px #000000}
-    span.s4 {font-kerning: none; background-color: #a4a4a4}
-    span.s5 {font: 12.0px 'Helvetica Neue'; font-kerning: none; -webkit-text-stroke: 0px #000000}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive AI Writing Software Market Report</title>
+
+    <!-- Meta Tags for Slack Preview -->
+    <meta property="og:title" content="Interactive AI Writing Software Market Report">
+    <meta property="og:description" content="An interactive dashboard to explore the AI book writing software market.">
+    <meta property="og:image" content="https://user.fm/files/v2-687399d9bbd3e393f151439dadc2a66c/image-1.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 500px;
+            }
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link.active {
+            color: #1c1917;
+            border-bottom-color: #1c1917;
+        }
+        .tool-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;meta property="og:image" content="https://user.fm/files/v2-687399d9bbd3e393f151439dadc2a66c/image-1.png"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Interactive AI Writing Software Market Report&lt;/title&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Add your meta tags here --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta property="og:title" content="Interactive AI Writing Software Market Report"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta property="og:description" content="An interactive dashboard to explore the AI book writing software market."&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta property="og:image" content="https://user.fm/files/v2-687399d9bbd3e393f151439dadc2a66c/image-1.png"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>...</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">AI Writing Market</span></p>
-<p class="p3"><span class="s2">Overview</span><span class="s3"> </span><span class="s2">Market Deep Dive</span><span class="s3"> </span><span class="s2">Tool Explorer</span><span class="s3"> </span><span class="s2">Future Outlook</span></p>
-<h1 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">The Niche Frontier of AI Writing</span></h1>
-<p class="p5"><span class="s1">This interactive report analyzes the profound shift in the AI book writing software market. The era of generic text generators is over; the future belongs to specialized tools that build deep capacity within specific user workflows. Explore the data to understand the key niches, leading tools, and strategic trends defining this evolution.</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Key Market Segments &amp; Core Dynamics</span></h2>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Automation to Augmentation</span></h3>
-<p class="p5"><span class="s1">The market has matured beyond simple automation. Successful platforms now act as collaborative "co-writers," enhancing human creativity with targeted assistance for tasks like brainstorming, describing scenes, and refining tone, rather than trying to replace the author.</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">The Rise of the Author-preneur</span></h3>
-<p class="p5"><span class="s1">AI is democratizing publishing. Independent authors are leveraging integrated platforms to manage the entire lifecycle—writing, design, formatting, and marketing—bypassing traditional gatekeepers and fueling demand for end-to-end solutions.</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">The Ethical Tightrope</span></h3>
-<p class="p5"><span class="s1">Success hinges on trust. The leading tools are proactively addressing critical ethical concerns around copyright, data sourcing, plagiarism, and transparency, building features that promote responsible and verifiable use of AI.</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Market Opportunity Deep Dive</span></h2>
-<p class="p5"><span class="s1">While multiple niches show strong potential, their growth drivers and market dynamics differ significantly. The chart below visualizes the projected annual growth rate (CAGR) for key segments. Click on a bar to explore the detailed analysis and reasoning for that niche's market opportunity.</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Select a Niche</span></h3>
-<p class="p5"><span class="s1">Click a bar on the chart to see the detailed market analysis for that writing niche.</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">AI Tool Explorer</span></h2>
-<p class="p5"><span class="s1">Dive into the landscape of niche AI writing software. Use the filters to narrow down the tools by their primary market. Click on any tool to view a comprehensive profile including key features, pros, cons, and pricing.</span></p>
-<p class="p7"><span class="s4">All</span><span class="s5"> </span><span class="s4">Fiction</span><span class="s5"> </span><span class="s4">Academic</span><span class="s5"> </span><span class="s4">Business</span><span class="s5"> </span><span class="s4">Self-Publishing</span><span class="s5"> </span><span class="s4">Scriptwriting</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Strategic Outlook &amp; Future Trajectory</span></h2>
-<p class="p5"><span class="s1">The market's evolution is accelerating. Success is defined by deep integration and user empowerment, while the future points toward even greater specialization and agentic, multi-modal capabilities.</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Winning Strategies Today</span></h3>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Deep Workflow Integration</span></h4>
-<p class="p5"><span class="s1">Valuable tools are not standalone apps but indispensable parts of a writer's process, like Novelcrafter's 'Codex' or NolanAI's pre-production suite.</span></p>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">User Control &amp; Customization</span></h4>
-<p class="p5"><span class="s1">The rise of "Bring-Your-Own-API" models shows a demand for flexibility, allowing power users to choose their AI models and fine-tune prompts.</span></p>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Community as a Moat</span></h4>
-<p class="p5"><span class="s1">Active communities on platforms like Discord provide invaluable feedback, foster loyalty, and create a network effect that's hard to replicate.</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">The Trajectory for Tomorrow</span></h3>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Hyper-Specialization</span></h4>
-<p class="p5"><span class="s1">The market will fragment further, with tools targeting specific sub-genres (e.g., cozy mystery vs. hard sci-fi) or professional documents (e.g., legal contracts vs. grant proposals).</span></p>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Multimodality as Standard</span></h4>
-<p class="p5"><span class="s1">The lines between writing, design, and video editing will blur. Platforms will be expected to generate text, images, audio, and video from a single prompt, like Melies.</span></p>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000"><span class="s1">Proactive Agentic AI</span></h4>
-<p class="p5"><span class="s1">The leap from passive tools to proactive 'agents' that can execute complex, multi-step workflows (e.g., "Research, outline, and draft a chapter") will redefine productivity.</span></p>
-<p class="p5"><span class="s1">Interactive Report created from "The Niche Frontier: An Expert Report on the AI Book Writing Software Market".</span></p>
-<p class="p5"><span class="s1">© 2024. For informational purposes only.</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px 'Helvetica Neue'; -webkit-text-stroke: #000000; min-height: 22.0px"><span class="s1"></span><br></h2>
-<p class="p7"><span class="s4">×</span></p>
-<p class="p2"><span class="s1"></span><br></p>
+<body class="bg-stone-100 text-stone-800">
+
+    <div id="app" class="antialiased">
+        <!-- Header -->
+        <header class="bg-stone-200/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b border-stone-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <span class="font-bold text-xl text-stone-900">AI Writing Market</span>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#overview" class="nav-link text-stone-600 hover:text-stone-900 border-b-2 border-transparent pb-1">Overview</a>
+                        <a href="#market-deep-dive" class="nav-link text-stone-600 hover:text-stone-900 border-b-2 border-transparent pb-1">Market Deep Dive</a>
+                        <a href="#tool-explorer" class="nav-link text-stone-600 hover:text-stone-900 border-b-2 border-transparent pb-1">Tool Explorer</a>
+                        <a href="#outlook" class="nav-link text-stone-600 hover:text-stone-900 border-b-2 border-transparent pb-1">Future Outlook</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Overview Section -->
+            <section id="overview" class="py-16 sm:py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-stone-900 tracking-tight">The Niche Frontier of AI Writing</h1>
+                    <p class="mt-6 max-w-3xl mx-auto text-lg text-stone-600">This interactive report analyzes the profound shift in the AI book writing software market. The era of generic text generators is over; the future belongs to specialized tools that build deep capacity within specific user workflows. Explore the data to understand the key niches, leading tools, and strategic trends defining this evolution.</p>
+                </div>
+                <div class="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-2xl font-bold text-center text-stone-900 mb-8">Key Market Segments & Core Dynamics</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white/50 p-6 rounded-lg shadow-sm">
+                             <h3 class="font-bold text-lg text-stone-800">Automation to Augmentation</h3>
+                             <p class="mt-2 text-stone-600">The market has matured beyond simple automation. Successful platforms now act as collaborative "co-writers," enhancing human creativity with targeted assistance for tasks like brainstorming, describing scenes, and refining tone, rather than trying to replace the author.</p>
+                        </div>
+                        <div class="bg-white/50 p-6 rounded-lg shadow-sm">
+                             <h3 class="font-bold text-lg text-stone-800">The Rise of the Author-preneur</h3>
+                             <p class="mt-2 text-stone-600">Independent authors are leveraging integrated platforms to manage the entire lifecycle—writing, design, formatting, and marketing—bypassing traditional gatekeepers and fueling demand for end-to-end solutions.</p>
+                        </div>
+                        <div class="bg-white/50 p-6 rounded-lg shadow-sm">
+                             <h3 class="font-bold text-lg text-stone-800">The Ethical Tightrope</h3>
+                             <p class="mt-2 text-stone-600">Success hinges on trust. The leading tools are proactively addressing critical ethical concerns around copyright, data sourcing, plagiarism, and transparency, building features that promote responsible and verifiable use of AI.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Deep Dive Section -->
+            <section id="market-deep-dive" class="py-16 sm:py-20 bg-white/70">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-stone-900 tracking-tight">Market Opportunity Deep Dive</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">While multiple niches show strong potential, their growth drivers and market dynamics differ significantly. The chart below visualizes the projected annual growth rate (CAGR) for key segments. Click on a bar to explore the detailed analysis and reasoning for that niche's market opportunity.</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                        <div class="lg:col-span-3">
+                            <div class="chart-container">
+                                <canvas id="marketChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2">
+                             <div id="market-analysis-content" class="bg-stone-100 p-6 rounded-lg h-full min-h-[400px]">
+                                <h3 id="analysis-title" class="font-bold text-xl text-stone-800 mb-4">Select a Niche</h3>
+                                <div id="analysis-text" class="prose prose-stone">
+                                    <p>Click a bar on the chart to see the detailed market analysis for that writing niche.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tool Explorer Section -->
+            <section id="tool-explorer" class="py-16 sm:py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-stone-900 tracking-tight">AI Tool Explorer</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">Dive into the landscape of niche AI writing software. Use the filters to narrow down the tools by their primary market. Click on any tool to view a comprehensive profile including key features, pros, cons, and pricing.</p>
+                    </div>
+                    <div class="flex justify-center space-x-2 sm:space-x-4 mb-8" id="tool-filters">
+                         <button data-filter="All" class="filter-btn active bg-stone-800 text-white px-4 py-2 rounded-full text-sm font-medium">All</button>
+                         <button data-filter="Fiction & Creative Writing" class="filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm font-medium border border-stone-300">Fiction</button>
+                         <button data-filter="Academic & Education" class="filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm font-medium border border-stone-300">Academic</button>
+                         <button data-filter="Business & Marketing" class="filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm font-medium border border-stone-300">Business</button>
+                         <button data-filter="Self-Publishing" class="filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm font-medium border border-stone-300">Self-Publishing</button>
+                         <button data-filter="Scriptwriting & Journalism" class="filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm font-medium border border-stone-300">Scriptwriting</button>
+                    </div>
+                    <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future Outlook Section -->
+            <section id="outlook" class="py-16 sm:py-20 bg-white/70">
+                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-stone-900 tracking-tight">Strategic Outlook & Future Trajectory</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">The market's evolution is accelerating. Success is defined by deep integration and user empowerment, while the future points toward even greater specialization and agentic, multi-modal capabilities.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div>
+                            <h3 class="font-bold text-xl text-stone-800 mb-4 text-center">Winning Strategies Today</h3>
+                            <div class="space-y-6">
+                                <div class="bg-stone-100 p-6 rounded-lg">
+                                    <h4 class="font-semibold text-stone-900">Deep Workflow Integration</h4>
+                                    <p class="text-stone-600 mt-1">Valuable tools are not standalone apps but indispensable parts of a writer's process, like Novelcrafter's 'Codex' or NolanAI's pre-production suite.</p>
+                                </div>
+                                <div class="bg-stone-100 p-6 rounded-lg">
+                                    <h4 class="font-semibold text-stone-900">User Control & Customization</h4>
+                                    <p class="text-stone-600 mt-1">The rise of "Bring-Your-Own-API" models shows a demand for flexibility, allowing power users to choose their AI models and fine-tune prompts.</p>
+                                </div>
+                                 <div class="bg-stone-100 p-6 rounded-lg">
+                                    <h4 class="font-semibold text-stone-900">Community as a Moat</h4>
+                                    <p class="text-stone-600 mt-1">Active communities on platforms like Discord provide invaluable feedback, foster loyalty, and create a network effect that's hard to replicate.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-stone-800 mb-4 text-center">The Trajectory for Tomorrow</h3>
+                             <div class="space-y-6">
+                                <div class="bg-stone-100 p-6 rounded-lg">
+                                    <h4 class="font-semibold text-stone-900">Hyper-Specialization</h4>
+                                    <p class="text-stone-600 mt-1">The market will fragment further, with tools targeting specific sub-genres (e.g., cozy mystery vs. hard sci-fi) or professional documents (e.g., legal contracts vs. grant proposals).</p>
+                                </div>
+                                <div class="bg-stone-100 p-6 rounded-lg">
+                                    <h4 class="font-semibold text-stone-900">Multimodality as Standard</h4>
+                                    <p class="text-stone-600 mt-1">The lines between writing, design, and video editing will blur. Platforms will be expected to generate text, images, audio, and video from a single prompt, like Melies.</p>
+                                </div>
+                                 <div class="bg-stone-100 p-6 rounded-lg">
+                                    <h4 class="font-semibold text-stone-900">Proactive Agentic AI</h4>
+                                    <p class="text-stone-600 mt-1">The leap from passive tools to proactive 'agents' that can execute complex, multi-step workflows (e.g., "Research, outline, and draft a chapter") will redefine productivity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-stone-200">
+             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm text-stone-500">
+                <p>Interactive Report created from "The Niche Frontier: An Expert Report on the AI Book Writing Software Market".</p>
+                <p>&copy; 2024. For informational purposes only.</p>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div id="tool-modal" class="modal fixed inset-0 bg-black bg-opacity-60 z-50 hidden items-center justify-center p-4" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="bg-stone-100 rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform transition-all">
+                <div class="sticky top-0 bg-stone-200 p-4 border-b border-stone-300 flex justify-between items-center z-10">
+                    <h2 id="modal-title" class="text-2xl font-bold text-stone-900"></h2>
+                    <button id="modal-close" class="text-stone-500 hover:text-stone-800">&times;</button>
+                </div>
+                <div id="modal-content" class="p-6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const toolsData = [
+            { id: 'sudowrite', name: 'Sudowrite', niche: 'Fiction & Creative Writing', differentiator: 'Proprietary "Muse" LLM fine-tuned for high-quality, creative fiction.', features: ['Story Bible for consistency', 'AI-powered Write/Expand for scenes', 'Describe with sensory details', 'Rewrite for tone and pacing', 'Brainstorming tools & plugins'], pros: ['High-quality, creative prose', 'Intuitive, user-friendly interface', 'Excellent for brainstorming', 'Strong revision and description tools'], cons: ['Content can require significant editing', 'Credit-based system can be expensive', 'Basic text editor features', 'Can struggle with context in very long projects'], pricing: 'Free Trial; Paid plans from ~$10/month (credit-based). Professional tier ~$29/month.' },
+            { id: 'novelcrafter', name: 'Novelcrafter', niche: 'Fiction & Creative Writing', differentiator: 'BYO-API model and "The Codex," a dynamic wiki for world-building that deeply informs all AI generation.', features: ['The Codex: dynamic world bible', 'BYO-API: Connect to any model (OpenAI, Claude, etc.)', 'Fully customizable prompts', 'Context-aware AI Chat', 'Visual planning & outlining boards'], pros: ['Unparalleled flexibility and control', 'Best-in-class consistency with The Codex', 'Cost-effective pay-as-you-go AI usage', 'Strong community and responsive dev team'], cons: ['Steep learning curve for beginners', 'Requires managing own API keys', 'Minimalist interface may lack features for some', 'Generic output without good prompt engineering'], pricing: '21-day Free Trial; Plans from ~$4/month (no AI) to ~$16/month + API costs.' },
+            { id: 'raptorwrite', name: 'Raptor Write', niche: 'Fiction & Creative Writing', differentiator: 'The ultimate free/low-cost option for power users, offering BYO-API control with zero software subscription cost.', features: ['BYO-API model (via OpenRouter)', 'Customizable system, continue, and revise prompts', 'Simple project management', 'Access to multiple AI models, including NSFW options'], pros: ['Extremely cost-effective (software is free)', 'Simple, uncluttered interface', 'High degree of user control', 'Good for long outputs'], cons: ['No cloud backup (relies on browser memory)', 'Very basic interface, lacks folders', 'Requires technical setup for API key', 'Less mature development'], pricing: 'Free software; Users only pay for API usage via OpenRouter (e.g., <$2 for 3 months of use).' },
+            { id: 'novelistai', name: 'NovelistAI', niche: 'Fiction & Creative Writing', differentiator: 'A multimodal content factory integrating AI text, image, and audiobook generation in one platform.', features: ['Multi-format generation (novels, gamebooks)', 'AI cover art & illustrations', 'AI audiobook creation with voice cloning', 'Advanced AI editing & rewriting'], pros: ['All-in-one platform for text, image, audio', 'Unique interactive gamebook creation', 'Strong multimedia features', 'Supports 30+ languages'], cons: ['Confusing and costly credit system', 'Very limited free plan', 'Newer platform, less refined'], pricing: 'Free (very limited); Premium from $12/month ($9/mo annually).' },
+            { id: 'squibler_fiction', name: 'Squibler', niche: 'Fiction & Creative Writing', differentiator: 'A unique one-stop ideation-to-print service, offering to print and ship a hard copy of the user\'s book.', features: ['AI book/outline generation', 'AI Smart Writer (expand, rewrite, describe)', 'Visual generation (text-to-image/video)', 'Project management (corkboard, timeline)', 'Hard copy printing service'], pros: ['Versatile for novels, scripts, non-fiction', 'Good project management features', 'Generous free plan (6k words/mo)', 'Strong outlining structure'], cons: ['Unclear what LLM is used', 'Lacks deep AI customization', 'Users report app can be slow/buggy', 'Pro plan can be pricey'], pricing: 'Free (6k words/mo); Pro at $20/month.' },
+            { id: 'scispace', name: 'SciSpace', niche: 'Academic & Education', differentiator: 'Agentic Literature Review ("Deep Review") that mimics a human researcher\'s workflow to synthesize findings from millions of papers.', features: ['AI-powered literature review on 285M+ papers', 'Chat with PDF for cited answers', 'AI writer with paraphraser and 9k+ citation styles', 'Data extraction from multiple PDFs'], pros: ['Excellent for literature discovery', 'Powerful "Chat with PDF" feature', 'Focus on verifiable, cited answers to reduce hallucinations', 'Chrome extension for explaining technical content'], cons: ['Expensive subscriptions for advanced features', 'No MS Word integration', 'Limited free plan', 'Reports of inadequate customer service'], pricing: 'Basic (Free, limited); Premium at $20/month ($12/mo annually); Advanced (with Deep Review) at $90/month.' },
+            { id: 'jenniai', name: 'Jenni AI', niche: 'Academic & Education', differentiator: 'Source-grounded AI autocomplete suggests text directly informed by the user\'s uploaded research library.', features: ['AI Autocomplete with in-text citations', 'Supports 1700+ citation styles', 'Research Library with "Chat with your sources"', 'Advanced paraphrasing and editing commands', 'LaTeX/Word export'], pros: ['Excellent for integrating citations into workflow', 'Grounded, relevant suggestions', 'Intuitive UI praised by users', 'Strong for overcoming writer\'s block'], cons: ['Citation accuracy can be inconsistent', 'Sentence-by-sentence generation can be slow', 'Very limited free plan (200 words/day)', 'No mobile app'], pricing: 'Free (200 words/day); Unlimited plan at $12/month.' },
+            { id: 'paperpal', name: 'Paperpal', niche: 'Academic & Education', differentiator: 'Its AI model is trained specifically on millions of published scholarly articles for superior, context-specific language suggestions.', features: ['AI trained on scholarly articles', 'Comprehensive editing (grammar, style)', '30+ submission readiness checks for journals', 'Plagiarism checker (Turnitin)', 'In-built literature search'], pros: ['Highly specialized for academic language', 'Strong integration (Word, GDocs, Overleaf)', 'Excellent for non-native English speakers', 'Secure; user data not used for training'], cons: ['Writing features less developed than editing', 'Citation management can be clunky', 'Paid plan needed for heavy use', 'Can be slow with large documents'], pricing: 'Free (limited); Prime at $19/month ($119/year).' },
+            { id: 'jasper', name: 'Jasper', niche: 'Business & Marketing', differentiator: 'An agentic Go-To-Market (GTM) platform with a proprietary context hub (Brand Voice & Jasper IQ) for highly consistent, on-brand content.', features: ['Brand Voice & Jasper IQ knowledge base', 'Campaign and workflow planning tools', '90+ marketing templates', 'AI image suite', 'Team collaboration tools'], pros: ['High-quality, creative output', 'Excellent for maintaining brand consistency', 'User-friendly editor', 'Strong enterprise-grade features'], cons: ['More expensive than many competitors', 'Higher learning curve to master', 'No live internet access for fact-checking', 'Output can be verbose'], pricing: '7-day Trial; Plans start at $49/month ($39/mo annually).' },
+            { id: 'copyai', name: 'Copy.ai', niche: 'Business & Marketing', differentiator: 'A Go-To-Market (GTM) Agent Platform that automates sales/marketing workflows, with a vast library of free single-purpose tools.', features: ['GTM Agent Platform for workflow automation', 'Infobase & Brand Voice repository', 'Extensive free tools (headlines, slogans, etc.)', 'Blog Post Wizard for first drafts'], pros: ['Generous free plan (2k words/mo)', 'Easy to use with many templates', 'Strong for ideation and first drafts', 'Good for short-form copy'], cons: ['Output can be "fluffy" and require heavy editing', 'Prone to stability issues', 'Can produce content with errors', 'Lacks source citation for stats'], pricing: 'Free (2k words/mo); Starter at $49/month ($36/mo annually).' },
+            { id: 'writesonic', name: 'Writesonic', niche: 'Business & Marketing', differentiator: 'Features "Chatsonic," a proprietary AI chat assistant designed as a more capable, up-to-date alternative to free ChatGPT, integrated into the workflow.', features: ['AI Article Writer for factual articles', 'Chatsonic AI assistant', 'SEO optimization tools', '100+ AI templates', 'Brand Voice customization'], pros: ['User-friendly interface', 'Generous free plan (10k words/mo)', 'Content is often "human-like"', 'Supports multiple languages, integrates with Zapier'], cons: ['Can struggle with nuanced instructions', 'Article research can be unreliable', 'Reports of poor billing practices/customer service', 'Editing tools could be improved'], pricing: 'Free (10k words/mo); Freelancer at $20/month ($16/mo annually).' },
+            { id: 'publishingai', name: 'Publishing.ai', niche: 'Self-Publishing', differentiator: 'An integrated model bundling an AI writing tool with a comprehensive self-publishing educational course.', features: ['Book topic idea generator', 'Customer research reports', 'Full manuscript generation (30k words)', 'Customizable writing styles', 'Sales analytics tracking'], pros: ['Aims to be an all-in-one solution', 'Promises to reduce time/cost of ghostwriting', 'Provides training and support'], cons: ['Often reviewed as an expensive course, not a tool', 'High cost (~$2k) for questionable AI quality', 'Accused of misleading marketing/difficult refunds', 'Not user-friendly; requires course enrollment'], pricing: 'No free trial; Access tied to course enrollment (~$1,500 - $2,000).' },
+            { id: 'spines', name: 'Spines', niche: 'Self-Publishing', differentiator: 'A hybrid publisher model blending traditional services (editing, design, distribution) with a self-publishing platform, powered by AI.', features: ['AI manuscript scans for grammar/style', 'Integrated production services', 'AI audiobook creation', 'AI-driven marketing analysis', 'Central author dashboard'], pros: ['Streamlined, one-stop solution', 'Fast time-to-market (2-4 weeks)', 'Accessible to any author', 'Bookstore-quality output'], cons: ['High cost ($1k - $6k)', '"Vanity Press" concerns (high fees + 30% royalty cut)', 'Limited human involvement in cheaper tiers', 'Reports of poor communication and launch delays'], pricing: 'Tiered packages from ~$1,000 to ~$6,000 + 30% royalty cut.' },
+            { id: 'atticus', name: 'Atticus', niche: 'Self-Publishing', differentiator: 'The "Vellum-alternative for everyone," offering professional book formatting on all platforms (Windows, Mac, etc.) for a one-time price.', features: ['All-in-one writing & formatting tool', '17+ customizable chapter themes', 'Cross-platform (PWA for Win, Mac, Linux)', 'Multiple export formats (EPUB, PDF)', 'Offline use & cloud backup'], pros: ['Excellent value (one-time purchase)', 'Easy to use, intuitive interface', 'Cross-platform availability is a major plus', 'Strong, responsive customer support'], cons: ['No AI writing features', 'Limited collaboration tools', 'No free version (30-day guarantee instead)', 'Can be slow with very large files'], pricing: '$147 one-time purchase for lifetime access.' },
+            { id: 'designrr', name: 'Designrr', niche: 'Self-Publishing', differentiator: 'A content repurposing powerhouse that transforms existing assets (blogs, podcasts, videos) into professionally designed eBooks and lead magnets.', features: ['Content repurposing engine (imports from web, docs, audio, video)', 'AI transcription service', '100+ design templates', 'Wordgenie AI writer', 'Multiple export options (PDF, Kindle, ePub)'], pros: ['Excellent for creating visual lead magnets quickly', 'Saves significant time on design', 'Supports a wide range of import sources', 'Affordable one-time purchase option'], cons: ['Marketing can be misleading', 'Advanced features locked behind expensive plans', 'Terms of service raised content ownership concerns'], pricing: 'Lifetime basic plan ~$27; Subscriptions from $29-$99/month for Pro features.' },
+            { id: 'squibler_script', name: 'Squibler', niche: 'Scriptwriting & Journalism', differentiator: 'Focuses on taking a writer from a script idea to a "production-ready masterpiece" with visual generation and printing.', features: ['Genre-specific script templates', 'AI script generation and outlining', 'AI Smart Writer for scenes and dialogue', 'Visuals generation (text-to-image/video)', 'Scene-by-scene progress tracking'], pros: ['Versatile platform for scripts, novels', 'Strong AI for generation and assistance', 'Good project management tools'], cons: ['AI can struggle with specific styles', 'Users report performance issues/slow UI', 'Pro plan can be pricey'], pricing: 'Free (6k words/mo); Pro at $20/month.' },
+            { id: 'nolanai', name: 'NolanAI', niche: 'Scriptwriting & Journalism', differentiator: 'An end-to-end pre-production suite that extends beyond writing to automate script coverage, breakdown, and budgeting.', features: ['AI co-pilot editor', 'AI script coverage & plot hole analysis', 'Automated script breakdown', 'AI pitch deck creation', 'AI budgeting'], pros: ['Comprehensive pre-production suite', 'Powerful AI feedback tools', 'Strong focus on data security/IP ownership', 'Great value for the money'], cons: ['May be too complex for simple writing needs', 'Relies on AI suggestions that may not fit writer\'s vision'], pricing: 'Free Tier available; Pro starts at $29.99/month.' },
+            { id: 'melies', name: 'Melies', niche: 'Scriptwriting & Journalism', differentiator: 'A true text-to-movie AI filmmaking platform that generates a complete, coherent movie (visuals, sound, music) directly from a script.', features: ['All-in-one AI filmmaking (video, SFX, music)', 'AI screenwriting assistance', 'Consistent AI characters (faces, voices)', 'Integrates best-in-class models (Luma, Runway, etc.)'], pros: ['True "idea to movie" platform', 'Empowers indie filmmakers', 'Focuses on coherent, story-driven movies'], cons: ['Steep learning curve, potential for bugs', 'AI video quality is still evolving', 'Credit system can be expensive'], pricing: 'Starts at $29/month for 2,500 credits.' },
+            { id: 'googlepinpoint', name: 'Google Pinpoint', niche: 'Scriptwriting & Journalism', differentiator: 'A Google-powered investigative hub for journalists to analyze massive, unstructured datasets (including handwritten notes and audio).', features: ['Large-scale document analysis', 'AI-powered semantic search', 'Audio/video transcription', 'Automatic entity recognition (people, orgs)', 'Collaboration tools'], pros: ['Excellent for investigative journalism', 'Powerful semantic search', 'Fast and accurate transcription', 'Completely free for journalists'], cons: ['Requires application and verification for access', 'Data privacy concerns for sensitive topics', 'A research tool, not a writing assistant'], pricing: 'Free for verified journalists and researchers.' },
+            { id: 'newswhip', name: 'NewsWhip', niche: 'Scriptwriting & Journalism', differentiator: 'A predictive news intelligence platform that uses AI to forecast what stories *will become* popular, giving a critical time advantage.', features: ['Real-time media monitoring', 'Predictive analytics for story traction', 'AI agents provide context and analysis', '7+ years of historical data'], pros: ['Excellent for discovering emerging stories', 'AI provides analysis, not just data', 'Helps PR teams become proactive', 'Trusted by major brands'], cons: ['A monitoring tool, not a creation tool', 'Enterprise-level product, likely expensive'], pricing: 'Pricing not public; requires demo request.' },
+        ];
+        
+        const marketAnalysisData = {
+            "Fiction & Creative Writing": { title: "Fiction & Creative Writing (High Opportunity)", text: `<p>A compelling growth area with a large, engaged author base. The market rewards deep, niche-specific features addressing novelist pain points like character consistency and plot development.</p><p>A key dynamic is the split between "Ease-of-Use Seekers" (served by polished tools like <strong>Sudowrite</strong>) and "Power Users" who want control (served by flexible, BYO-API platforms like <strong>Novelcrafter</strong>). This indicates the market can support multiple successful, distinct strategies.</p>`, cagr: 20.3 },
+            "Academic & Education": { title: "Academic & Education (High Opportunity)", text: `<p>A high-growth frontier driven by pressure on students and researchers to produce work efficiently. The key differentiator here is not just writing, but conducting <em>verifiable research</em>.</p><p>The greatest weakness of general LLMs is hallucinating facts and sources. Successful tools like <strong>SciSpace</strong> and <strong>Jenni AI</strong> solve this by grounding their AI outputs in a verifiable corpus of scholarly literature, positioning themselves as "AI research assistants," not just writers.</p>`, cagr: 25.5 },
+            "Business & Marketing": { title: "Business & Marketing (High Opportunity)", text: `<p>The most mature and highly monetized niche, fueled by a clear and measurable ROI for businesses. The market is exceptionally large and continues to grow.</p><p>However, the frontier is evolving from standalone copywriting to integrated "Go-To-Market (GTM) AI." Leaders like <strong>Jasper</strong> and <strong>Copy.ai</strong> are repositioning as platforms that infuse AI across the entire marketing engine, ensuring all content is strategically consistent and on-brand.</p>`, cagr: 26.7 },
+            "Self-Publishing": { title: "Self-Publishing (High Opportunity)", text: `<p>This niche demands end-to-end solutions, as the self-publisher acts as a small business owner managing writing, editing, design, distribution, and marketing. There's a huge opportunity for a platform that integrates these functions.</p><p>However, execution is perilous. Early entrants like <strong>Spines</strong> have been criticized for "vanity press" models. The real opportunity lies in creating a high-quality, <em>author-centric</em> platform, perhaps with a modular approach, rather than a single expensive, inflexible package.</p>`, cagr: 30.8 },
+            "Scriptwriting & Journalism": { title: "Scriptwriting & Journalism (Moderate to High Opportunity)", text: `<p>This is best understood as two sub-markets. For <strong>scriptwriting</strong>, the value is in production efficiency—tools like <strong>NolanAI</strong> integrate writing with budgeting, scheduling, and script breakdown.</p><p>For <strong>journalism</strong>, the focus is on research augmentation and verification. Tools like <strong>Google Pinpoint</strong> analyze large document sets, while others are needed to fight misinformation. Ethical concerns and public skepticism mean adoption for content generation will be cautious.</p>`, cagr: 25.7 }
+        };
+
+        const toolsGrid = document.getElementById('tools-grid');
+        const toolFilters = document.getElementById('tool-filters');
+        const modal = document.getElementById('tool-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const modalClose = document.getElementById('modal-close');
+        
+        const renderToolCards = (filter = 'All') => {
+            toolsGrid.innerHTML = '';
+            const filteredTools = filter === 'All' ? toolsData : toolsData.filter(tool => tool.niche === filter);
+            
+            if (filteredTools.length === 0) {
+                toolsGrid.innerHTML = `<p class="text-stone-500 col-span-full text-center">No tools found for this category.</p>`;
+                return;
+            }
+
+            filteredTools.forEach(tool => {
+                const card = document.createElement('div');
+                card.className = 'tool-card bg-white rounded-lg shadow-md p-5 flex flex-col';
+                card.innerHTML = `<h3 class="text-lg font-bold text-stone-800">${tool.name}</h3><p class="text-sm text-stone-500 mb-3">${tool.niche}</p><p class="text-stone-600 text-sm flex-grow">${tool.differentiator}</p><button data-id="${tool.id}" class="view-details-btn mt-4 bg-stone-700 hover:bg-stone-800 text-white text-sm font-semibold py-2 px-4 rounded-full w-full">View Details</button>`;
+                toolsGrid.appendChild(card);
+            });
+        };
+
+        const showToolModal = (toolId) => {
+            const tool = toolsData.find(t => t.id === toolId);
+            if (!tool) return;
+            modalTitle.textContent = tool.name;
+            const createList = (items) => `<ul>${items.map(item => `<li class="flex items-start"><span class="mr-2 text-emerald-600">&#10003;</span><span>${item}</span></li>`).join('')}</ul>`;
+            modalContent.innerHTML = `<div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><div><h4 class="font-bold text-lg text-stone-800 border-b pb-2 mb-3">Key Features</h4><div class="prose prose-stone max-w-none text-sm">${createList(tool.features)}</div><h4 class="font-bold text-lg text-stone-800 border-b pb-2 mt-6 mb-3">Pricing</h4><p class="text-sm text-stone-700">${tool.pricing}</p></div><div><div class="bg-emerald-50 border border-emerald-200 p-4 rounded-lg mb-4"><h4 class="font-bold text-lg text-emerald-800 mb-2">Pros</h4><div class="prose prose-sm text-emerald-700 max-w-none">${createList(tool.pros)}</div></div><div class="bg-red-50 border border-red-200 p-4 rounded-lg"><h4 class="font-bold text-lg text-red-800 mb-2">Cons</h4><div class="prose prose-sm text-red-700 max-w-none">${createList(tool.cons.map(c => c.replace('&#10003;', '&#10007;')))}</div></div></div></div>`;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        };
+
+        toolFilters.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active', 'bg-stone-800', 'text-white');
+                    btn.classList.add('bg-white', 'text-stone-700');
+                });
+                e.target.classList.add('active', 'bg-stone-800', 'text-white');
+                e.target.classList.remove('bg-white', 'text-stone-700');
+                renderToolCards(e.target.dataset.filter);
+            }
+        });
+
+        toolsGrid.addEventListener('click', (e) => {
+            if (e.target.classList.contains('view-details-btn')) {
+                showToolModal(e.target.dataset.id);
+            }
+        });
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) { closeModal(); }
+        });
+        
+        const ctx = document.getElementById('marketChart').getContext('2d');
+        const analysisTitleEl = document.getElementById('analysis-title');
+        const analysisTextEl = document.getElementById('analysis-text');
+        
+        const marketChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(marketAnalysisData),
+                datasets: [{
+                    label: 'Projected CAGR (%)',
+                    data: Object.values(marketAnalysisData).map(d => d.cagr),
+                    backgroundColor: ['rgba(59, 130, 246, 0.7)','rgba(16, 185, 129, 0.7)','rgba(239, 68, 68, 0.7)','rgba(245, 158, 11, 0.7)','rgba(139, 92, 246, 0.7)'],
+                    borderColor: ['rgba(59, 130, 246, 1)','rgba(16, 185, 129, 1)','rgba(239, 68, 68, 1)','rgba(245, 158, 11, 1)','rgba(139, 92, 246, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(context) { return ` ${context.dataset.label}: ${context.raw}%`; } } } },
+                scales: { x: { beginAtZero: true, title: { display: true, text: 'Compound Annual Growth Rate (CAGR)' } }, y: { ticks: { autoSkip: false, callback: function(value, index, values) { const label = this.getLabelForValue(value); if (label.length > 16) { return label.match(/.{1,16}/g); } return label; } } } },
+                onClick: (event, elements) => {
+                    if (elements.length > 0) {
+                        const elementIndex = elements[0].index;
+                        const nicheName = marketChart.data.labels[elementIndex];
+                        const analysis = marketAnalysisData[nicheName];
+                        analysisTitleEl.textContent = analysis.title;
+                        analysisTextEl.innerHTML = analysis.text;
+                    }
+                }
+            }
+        });
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('main section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) { link.classList.add('active'); }
+                    });
+                }
+            });
+        }, { root: null, rootMargin: '0px', threshold: 0.4 });
+        sections.forEach(section => { observer.observe(section); });
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        renderToolCards();
+    });
+    </script>
 </body>
 </html>
